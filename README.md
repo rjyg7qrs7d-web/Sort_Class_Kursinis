@@ -30,7 +30,7 @@ Reikalingas Python 3.10 arba naujesnis. Papildomų bibliotekų diegti
 nereikia.
 
 ```bash
-git clone https://github.com/<vartotojas>/Sort-Class-Strategies.git
+git clone https://github.com/<vartotojas>/Sort-Class-Kursinis.git
 cd Sort-Class-Kursinis
 python main.py
 ```
