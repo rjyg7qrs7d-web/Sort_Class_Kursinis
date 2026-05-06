@@ -54,13 +54,14 @@ def parodyti_duomenis(programa):
 
 def pasirinkti_algoritma(programa):
     """Leidzia vartotojui pasirinkti rusiavimo algoritma."""
-    galimi = RusiuokliuGamykla.galimi_algoritmai()
+    gamykla = RusiuokliuGamykla()
+    galimi = gamykla.galimi_algoritmai()
     print("Galimi algoritmai:")
     for i, vardas in enumerate(galimi, 1):
         print(f"  {i}. {vardas}")
     pasirinkimas = input("Iveskite pavadinima: ").strip()
     try:
-        rusiuoklis = RusiuokliuGamykla.sukurti(pasirinkimas)
+        rusiuoklis = gamykla.sukurti(pasirinkimas)
         programa.nustatyti_rusiuokli(rusiuoklis)
         print(f"Pasirinktas: {rusiuoklis.pavadinimas}")
     except ValueError as klaida:
@@ -100,7 +101,8 @@ def parodyti_aprasyma(programa):
 def main():
     """Pagrindine programos funkcija."""
     # Pradzioje nustatome numatytaji algoritma.
-    pradinis_rusiuoklis = RusiuokliuGamykla.sukurti("greitasis")
+    gamykla = RusiuokliuGamykla()
+    pradinis_rusiuoklis = gamykla.sukurti("greitasis")
     programa = Programa(pradinis_rusiuoklis)
 
     # Visi galimi veiksmai surasyti zodyne.
