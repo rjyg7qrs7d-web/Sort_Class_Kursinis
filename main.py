@@ -38,7 +38,7 @@ def ivesti_ranka(programa):
     try:
         skaiciai = [int(x) for x in tekstas.split()]
         programa.nustatyti_duomenis(skaiciai)
-        print(f"Iraseta {len(skaiciai)} skaiciu.")
+        print(f"Irasete {len(skaiciai)} skaiciu.")
     except ValueError:
         print("Klaida: ivedete ne skaicius.")
 
